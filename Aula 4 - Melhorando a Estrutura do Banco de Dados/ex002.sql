@@ -15,4 +15,4 @@ CREATE TABLE pessoas (
     PRIMARY KEY (id)
 )DEFAULT CHARSET = utf8;
 
-DESCRIBE pessoas
+DROP TABLE pessoas;
