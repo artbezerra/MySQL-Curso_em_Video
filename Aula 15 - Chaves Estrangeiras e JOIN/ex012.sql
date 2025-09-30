@@ -19,3 +19,18 @@ DELETE FROM gafanhotos WHERE id = 3;
 
 SELECT nome, cursopreferido FROM gafanhotos;
 SELECT nome, cursopreferido FROM gafanhotos WHERE id = 1;
+
+SELECT g.nome, g.cursopreferido, c.nome, c.ano 
+FROM gafanhotos as g INNER JOIN cursos as c
+ON c.idcurso = g.cursopreferido
+ORDER BY g.nome;
+
+SELECT g.nome, g.cursopreferido, c.nome, c.ano 
+FROM gafanhotos as g LEFT OUTER JOIN cursos as c
+ON c.idcurso = g.cursopreferido
+ORDER BY g.nome;
+
+SELECT g.nome, g.cursopreferido, c.nome, c.ano 
+FROM gafanhotos as g RIGHT OUTER JOIN cursos as c
+ON c.idcurso = g.cursopreferido
+ORDER BY g.nome;
